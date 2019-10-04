@@ -9,10 +9,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-var total = a + b;
-var response = 'The sum of ' + a + ' and '+ b + ' is ' + total + '.';
+  var total = a + b;
+  var response = 'The sum of ' + a + ' and '+ b + ' is ' + total + '.';
 
-return [total, response];
+  return [total, response];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,14 +30,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-var total = a * b;
-var response =  'The product of ' + a + ' and '+ b + ' is ' + total + '.';
+  var total = a * b;
+  var response =  'The product of ' + a + ' and '+ b + ' is ' + total + '.';
 
-return [total,response];
+  return [total,response];
 }
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,14 +53,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sum = sum(a,b,c);
-var Mult = multiply(a,b,c);
-var third = a + ' and ' + b + ' and ' + c +
+  var x = sum(a,b)[0];
+  var y = sum(x ,c)[0];
+  var w = multiply(a,b)[0];
+  var z = multiply(w,c)[0];
+  var third = a + ' and ' + b + ' and ' + c + ' sum to ' + y + '.';
+  var fourth = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + z + '.';
+  return([y, z, third, fourth]);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -78,12 +83,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var i = sumArr[0];
+  var t = sumArr[1];
+  var y = sumArr[2];
+  var q = sum(i,t)[0];
+  var u = sum(q,y)[0];
+  var string = i + ',' + t + ',' + y + ' was passed in as an array of numbers, and ' + u + ' is their sum.';
+  return([u, string]);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -105,7 +116,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
